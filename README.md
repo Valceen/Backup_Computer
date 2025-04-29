@@ -15,7 +15,7 @@ Les sauvegardes sont réalisées avec WBAdmin<br>
 ## FONCTIONNEMENT
 - Faire un premiere sauvegarde manuellement pour que le module Windows Server Backup soit installé.<br>
 Changer le nom du serveur par défaut par le votre.
-$BackupServer = "\\SERVER"<br>
+$BackupServer = "\\\\SERVER"<br>
 
 - Fait un sauvegarde dans le répertoire :<br>
 Pour un controlleur de domaine :
