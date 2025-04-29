@@ -15,7 +15,7 @@ Les sauvegardes sont réalisées avec WBAdmin<br>
 ## FONCTIONNEMENT
 - Faire un premiere sauvegarde manuellement pour que le module Windows Server Backup soit installé.<br>
 Changer le nom du serveur par défaut par le votre.
-$BackupServer = "\\\\SERVER"<br>
+$BackupServer = "\\SERVER"<br>
 
 - Fait un sauvegarde dans le répertoire :<br>
 Pour un controlleur de domaine :
@@ -33,7 +33,19 @@ Exemple :<br>
 - Supprime toutes les sauvegardes de plus 15 jours :<br>
 $DeleteFolderFiles = (Get-Date).AddDays(-15)
 
-## Licence
-GNU General Public Licence V3.0
-https://github.com/Valceen/
+## RECOMMANATION
+Fonctionne trés bien avec un compte Gmsa (Group Managed Service Accounts)<br>
 
+Nécéssite :<br>
+- droits sur le répertoire de sauvegarde<br>
+- membre du groupe Backup Operators<br>
+
+et les droits de la GPO :<br>
+- Accéder a cet ordinateur a partir du réseau<br>
+- Ouvrir une session en tant que service<br>
+- Ouvrir une session en tant que tache<br>
+- sauvegarder les fichiers et les répertoires<br>
+
+## Licence
+GNU General Public Licence V3.0<br>
+https://github.com/Valceen/
